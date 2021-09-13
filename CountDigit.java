@@ -10,11 +10,17 @@ public class CountDigit {
         Scanner sc=new Scanner(System.in);
         int number=sc.nextInt();
         int i=0;
-        while(number!=0) {
-        	number=number/10;
-        	i++;
+        if(number==0) {
+        	System.out.println("Total digit is: 1");
+        }else {
+        	while(number>0) {
+            	number=number/10;
+            	i++;
+            }
+        	System.out.println("Total digit is:"+i);
         }
-        System.out.println("Total digit is:"+i);
+        
+        
 	}
 
 }
